@@ -1,0 +1,59 @@
+" COLOR SCHEME
+" ===========================================
+"colorscheme jellybeans
+colorscheme molokai
+set guifont=Lucida\ Console:h14
+
+" SHORTCUTS
+" ===========================================
+nnoremap <F3> :set hlsearch!<CR> " F3 to clear search highlights
+
+" NERD TREE
+" ===========================================
+autocmd WinEnter * call s:CloseIfOnlyNerdTreeLeft()
+
+" Close all open buffers on entering a window if the only
+" buffer that's left is the NERDTree buffer
+function! s:CloseIfOnlyNerdTreeLeft()
+  if exists("t:NERDTreeBufName")
+    if bufwinnr(t:NERDTreeBufName) != -1
+      if winnr("$") == 1
+        q
+      endif
+    endif
+  endif
+endfunction
+
+autocmd VimEnter * NERDTree " Automatically open NERDTree buffer
+autocmd VimEnter * wincmd p " Move cursor to default in file buffer
+
+
+" VUNDLE TIDBITS
+" ===========================================
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+
+" let Vundle manage Vundle
+" required! 
+Bundle 'gmarik/vundle'
+" My Bundles here:
+Bundle 'derekwyatt/vim-scala'
+Bundle 'majutsushi/tagbar'
+Bundle 'Lokaltog/vim-powerline'
+
+filetype plugin indent on     " required!
+
+" TAGBAR
+" ===========================================
+nnoremap <silent> <Leader>l :TagbarToggle <CR>
+let g:tagbar_width = 2
+
+
+" POWERLINE
+" ===========================================
+let g:Powerline_symbols = 'fancy'
+set laststatus=2
+
+" AUTO CLOSE BRACKETS
+" ===========================================
+nmap <Leader>a <Plug>ToggleAutoCloseMappings
