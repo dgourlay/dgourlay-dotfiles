@@ -29,7 +29,7 @@ ZSH_THEME="robbyrussell"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git)
+plugins=(git zsh-syntax-highlighting)
 
 # Customize to your needs...
 export PATH=/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/opt/X11/bin:/opt/local/bin:$HOME/Programs/scala/bin:$PATH
@@ -49,3 +49,9 @@ PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 alias tmux="TERM=screen-256color-bce tmux"
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
+
+#History Searching
+#bindkey "^[[A" history-beginning-search-backward
+#bindkey "^[[B" history-beginning-search-forward
+#Partial match / substring History search
+source ~/.oh-my-zsh/plugins/history-substring-search/history-substring-search.zsh
