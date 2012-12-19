@@ -5,7 +5,8 @@ ZSH=$HOME/.oh-my-zsh
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="robbyrussell"
+#ZSH_THEME="robbyrussell"
+ZSH_THEME="miloshadzic"
 
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
@@ -45,7 +46,7 @@ export PATH=$PATH:$GRAILS_HOME/bin
 export MAVEN_OPTS="-Xmx512m -XX:MaxPermSize=256m" # For grails-maven plugin
 export PHANTOM_JS_HOME=$HOME/Programs/phantomjs
 export PATH=$PATH:$PHANTOM_JS_HOME/bin
-PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+export PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 alias tmux="TERM=screen-256color-bce tmux"
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"

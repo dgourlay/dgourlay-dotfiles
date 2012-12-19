@@ -27,6 +27,8 @@ endfunction
 autocmd VimEnter * NERDTree " Automatically open NERDTree buffer
 autocmd VimEnter * wincmd p " Move cursor to default in file buffer
 
+map <F2> :NERDTreeToggle<CR>
+
 
 " VUNDLE TIDBITS
 " ===========================================
