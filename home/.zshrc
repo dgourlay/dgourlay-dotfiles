@@ -47,6 +47,8 @@ export MAVEN_OPTS="-Xmx512m -XX:MaxPermSize=256m" # For grails-maven plugin
 export PHANTOM_JS_HOME=$HOME/Programs/phantomjs
 export PATH=$PATH:$PHANTOM_JS_HOME/bin
 export PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+export ARAXIS_MERGE_UTILS=/Applications/Utilities/Araxis\ Merge.app/Contents/Utilities/
+export PATH=$PATH:ARAXIS_MERGE_UTILS
 alias tmux="TERM=screen-256color-bce tmux"
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
@@ -56,3 +58,5 @@ alias tmux="TERM=screen-256color-bce tmux"
 #bindkey "^[[B" history-beginning-search-forward
 #Partial match / substring History search
 source ~/.oh-my-zsh/plugins/history-substring-search/history-substring-search.zsh
+
+setopt hist_ignore_all_dups

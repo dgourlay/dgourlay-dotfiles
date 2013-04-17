@@ -1,7 +1,10 @@
 " COLOR SCHEME
 " ===========================================
 "colorscheme jellybeans
-colorscheme molokai
+"colorscheme molokai
+colorscheme vimbrant
+"set background=light
+"colorscheme solarized
 set guifont=Lucida\ Console:h14
 
 " SHORTCUTS
