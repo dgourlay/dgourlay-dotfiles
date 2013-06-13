@@ -33,7 +33,7 @@ ZSH_THEME="miloshadzic"
 plugins=(git zsh-syntax-highlighting)
 
 # Customize to your needs...
-export PATH=/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/opt/X11/bin:/opt/local/bin:$HOME/Programs/scala/bin:$PATH
+export PATH=/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:$HOME/Programs/scala/bin:$PATH
 
 
 source $ZSH/oh-my-zsh.sh
@@ -48,7 +48,9 @@ export PHANTOM_JS_HOME=$HOME/Programs/phantomjs
 export PATH=$PATH:$PHANTOM_JS_HOME/bin
 export PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 export ARAXIS_MERGE_UTILS=/Applications/Utilities/Araxis\ Merge.app/Contents/Utilities/
-export PATH=$PATH:ARAXIS_MERGE_UTILS
+export PATH=$PATH:$ARAXIS_MERGE_UTILS
+export ELASTIC_BEANSTALK_HOME=/Users/dgourlay/development/tools/AWS-ElasticBeanstalk-CLI/eb/linux/python2.7/
+export PATH=$PATH:$ELASTIC_BEANSTALK_HOME
 alias tmux="TERM=screen-256color-bce tmux"
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
@@ -60,3 +62,10 @@ alias tmux="TERM=screen-256color-bce tmux"
 source ~/.oh-my-zsh/plugins/history-substring-search/history-substring-search.zsh
 
 setopt hist_ignore_all_dups
+
+#Autocorrect ignores
+alias vagrant='nocorrect vagrant'
+
+#add play framework to the path
+export PLAY_PATH="/Users/dgourlay/development/tools/play"
+export PATH=$PATH:$PLAY_PATH
